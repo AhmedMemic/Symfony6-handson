@@ -4,12 +4,5 @@
 {% endblock %}
 
 {% block body %}
-	{% if posts|length > 0 %}
-		<h2>All Posts</h2>
-		{% for post in posts %}
-			{{ include("micro_post/_post.html.twig", {post: post}) }}
-		{% endfor %}
-	{% else %}
-		There is nothing here yet!
-	{% endif %}
+{{ include ('micro_post/_post_list.html.twig') }}
 {% endblock %}
